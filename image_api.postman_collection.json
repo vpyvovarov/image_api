@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "ec9bc3ac-0e95-4ad8-b457-e7266ad71c48",
+		"name": "image_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:5000/download/3e3b21bb-169c-4b9c-a6b9-ffcde2f990a9?zoom=23&left=100&right=200&top=300&bottom=400",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"download",
+						"3e3b21bb-169c-4b9c-a6b9-ffcde2f990a9"
+					],
+					"query": [
+						{
+							"key": "zoom",
+							"value": "23"
+						},
+						{
+							"key": "left",
+							"value": "100"
+						},
+						{
+							"key": "right",
+							"value": "200"
+						},
+						{
+							"key": "top",
+							"value": "300"
+						},
+						{
+							"key": "bottom",
+							"value": "400"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
