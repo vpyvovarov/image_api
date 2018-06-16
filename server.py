@@ -31,15 +31,19 @@ def get_logger():
 APP = Flask(__name__)
 API = Api(APP)
 
+
+# create storage directory if it doesn't exists
+if not os.path.exists(STORAGE_FOLDER):
+    os.makedirs(STORAGE_FOLDER)
+
+
 # disable flask logging and use custom logger
 logging.getLogger('werkzeug').setLevel(logging.ERROR)
+
 
 LOG = get_logger()
 LOG.info("Image Api started")
 
-
-# TODO: create documentations
-# TODO: requirements.txt
 
 class DB:
     """ Class for all DB related stuff"""
